@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head: sort of like the page setup area -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link tags are the way we include our css files -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- script tags are the we we include out own JavaScript files -->
+    <script src="./js/index.js"></script>
+    <!-- This is an HTML comment -->
+    <!-- This is a multiline html comment
+        all html "tags" are denoted with angle brackets (< and >)
+        the "title" tag is where we place the name/title for the html document
+        and it is the text that appears on the tab -->
+    <title>Samples</title>
+</head>
+<!-- Body: where the actual page content goes -->
+<body>
+    <!-- "div" is like a division element, they are one of the most common elements used -->
+    <div class="content">
+        <!-- p or paragraph tags are the standard way of displaying text 
+            the br/break tag is a kind of new line in html -->
+        <p>The great question: What is the answer to life, the universe, and everything?</p><br>
+        <!-- the span tag is a sort of test insert into, with the id of hidden we can affect this element in our css and JavaScript -->
+        <p>Hover to reveal: <span id="hidden">42</span></p>
+        <div id="jsexamples">
+            <!-- There are two types of list elements, we need those to 
+                tell the browser what the list elements should look like -->
+            <ul>
+                <!-- Headings are just easier ways to show important information without need to write our own css -->
+                <h2>Programming Data Types</h2>
+                <li onclick="giveInfo('Number')">Integers and floats</li>
+                <li onclick="giveInfo('String')">Strings</li>
+                <li onclick="giveInfo('Object')">Objects</li>
+                <li onclick="giveInfo('Function')">Functions</li>
+                <li onclick="giveInfo('Boolean')">Booleans</li>
+            </ul>
+        </div>
+        <!-- Add a link to another html file thats a to-do list -->
+    </div>
+</body>
+</html>

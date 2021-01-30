@@ -1,0 +1,47 @@
+/* CSS is how we change the layout of the webpage, 
+    where as html is the bones CSS is the wardrobe  */
+/* This makes sure our html and body elements take up the whole screen */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: grey;
+    color: white;
+}
+/* Make the list item elements play nice with everything else */
+li {
+    width: fit-content;
+    margin: auto;
+}
+/* Reset the padding and margin properties on our paragraph tags
+    this way we can better control how they change other elements */
+p {
+    padding: 0;
+    margin: 0;
+}
+/* This doesn't need to be class, since there is only one element with this
+    it should probably be an id, but for purposes of example its a class, denoted by the . preciding the class name */
+.content {
+    /* The following properties are how we center this element on the page */
+    width: 50%;
+    margin: auto;
+    /* This simply centers the text within the element */
+    text-align: center;
+    /* Using padding instead of margin because with padding we won't change the reset of the page */
+    padding-top: 1%;
+}
+/* Use the # to target a unique id */
+#hidden {
+    /* Color changes the text color of the element AND its children */
+    color: black;
+    background-color: black;
+    user-select: none;
+}
+/* :hover is called a psuedo class, it will take effect when the preceding element is hovered */
+#hidden:hover {
+    /* This "resets" both of the properties to their original state */
+    color: white;
+    background-color: initial;
+    /* Hides cursor when hovering over element */
+    cursor: none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false">
+    <head>
+        <title>To-Do</title>
+        <style>
+        html {
+            height: 100%;
+        }
+        .container {
+            margin: auto;
+            width: 25%;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" placeholder="Type next item here" id="input"/>
+            <br/>
+            <button id="btn" onclick="addItem()">Add Item To List</button>
+            <br/>
+            <div id="list"></div>
+        </div>
+        <script>
+        //list element set globally
+        var list = document.getElementById("list")
+
+        function addItem() {
+            //get what new item should be added
+            let newItem = document.getElementById("input").value
+            //create new li element
+            let newListElement = document.createElement('li')
+            //insert the new task into new element
+            newListElement.innerHTML = newItem
+            //add anon onclick function to remove item
+            newListElement.onclick = () => {
+                list.removeChild(newListElement)
+            }
+            //add new task to list
+            list.appendChild(newListElement)
+        }
+        
+        function saveListToLocalStorage() {
+            let activeList = []
+            let a = window.localStorage.getItem("todolist")
+            for (i = 0; i < document.getElementsByTagName("li").length; i++) {
+                activeList.push(document.getElementsByTagName("li")[i].innerText)
+            }
+            window.localStorage.setItem("todolist", activeList)
+        }
+
+        function loadListFromLocalStorage() {
+
+        }
+
+        window.addEventListener("keypress", (ev) => {
+            if (ev.which === 13) {
+                addItem()
+            }
+        })
+
+        window.addEventListener("load", () => {
+            loadListFromLocalStorage()
+        })
+
+        window.addEventListener("close", () => {
+            saveListToLocalStorage()
+        })
+        </script>
+    </body>
+</html>
