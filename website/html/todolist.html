@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <!-- style tags allow us to do css inside our html file, only really used when not much css is needed -->
+    <style>
+    html {
+        height: 100%;
+        width: 100%;
+    }
+    body {
+        background: grey;
+        width: fit-content;
+        margin: auto;
+        height: fit-content;
+        text-align: center;
+        padding-top: 1%;
+    }
+    li {
+        width: fit-content;
+    }
+    li:hover {
+        cursor: pointer;
+    }
+    </style>
+    <script defer src="../js/todo.js"></script>
+</head>
+<body>
+    <input id="input" type="text"/>
+    <div id="list"></div>
+</body>
+</html>
