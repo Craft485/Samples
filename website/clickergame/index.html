@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medieval Clicker</title>
+    <link rel="shortcut icon" href="./coinimg.png" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./JS/index.js"></script>
+    <script src="./JS/Building.js"></script>
+</head>
+<body>
+    <div id="resources">
+        <div>
+            Coins: <span id="coins">0</span>
+            <br>
+            Coins Per Second(CPS): <span id="coinsPerSecond">0</span>
+        </div>
+        <br>
+        <button id="main-btn" onclick="Game.coins++">
+            <img src="./coinimg.png" alt="Click for Coins" height="100px" width="100px"/>
+        </button>
+    </div>
+    <div id="center-content">
+        <button onclick="toggleOpts()">Options</button>
+        <br>
+        <button onclick="toggleStats()">Stats</button>
+    </div>
+    <div id="store">
+        <div id="upgrades-display">
+            <h1 class="heading">Upgrades</h1>
+        </div>
+        <div id="buildings-display">
+            <h1 class="heading">Buildings</h1>
+            <!-- Actual buildings will be generated with JS -->
+        </div>
+    </div>
+</body>
+</html>
