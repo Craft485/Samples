@@ -1,7 +1,6 @@
 // Global game object
 var Game = {
     coins: 0,
-    coinsAllTime: 0,
     coinsPerSecond: 0,
     buildings: new Map
 }
@@ -27,7 +26,7 @@ function load() {
 // Tick/update function
 window.setInterval(() => {
     document.getElementById("coins").innerText = Game.coins
-    document.getElementById("coinsPerSecond").innerText = JSON.stringify(Game.coinsPerSecond)
+    document.getElementById("coinsPerSecond").innerText = Game.coinsPerSecond
 }, 250)
 
 window.setInterval(() => Game.coins += Game.coinsPerSecond, 1000)
